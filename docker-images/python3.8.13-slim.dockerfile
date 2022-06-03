@@ -2,6 +2,8 @@ FROM python:3.8.13-slim
 
 LABEL maintainer="Sebastian Ramirez <tiangolo@gmail.com>"
 
+RUN apt-get update
+
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
